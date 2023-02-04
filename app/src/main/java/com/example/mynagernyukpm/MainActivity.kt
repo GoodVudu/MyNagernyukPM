@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
             buttonEmail.setTextColor(resources.getColor(R.color.black))
             edText1.hint = "Введите номер"
             edText1.inputType = 2
-            accessTypeFlag = 0
+            accessTypeFlag = 0 //New Flag
         }
 
         registButton.setOnClickListener {
