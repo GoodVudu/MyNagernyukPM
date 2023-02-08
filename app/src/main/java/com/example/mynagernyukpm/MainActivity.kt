@@ -51,6 +51,7 @@ class MainActivity : AppCompatActivity() {
                         "Неправильно введен Email, повторите попытку снова",
                         Toast.LENGTH_LONG
                     ).show()
+                    return@setOnClickListener
                 }
             }
             if (accessTypeFlag == 0){
@@ -60,13 +61,16 @@ class MainActivity : AppCompatActivity() {
                         "Неправильно введен номер телефона, повторите попытку снова",
                         Toast.LENGTH_LONG
                     ).show()
+                    return@setOnClickListener
                 }
             }
             if (passwordText1.length < 8){
                 Toast.makeText(this,"Неправильно введен пароль, минимум 8 символов",Toast.LENGTH_LONG).show()
+                return@setOnClickListener
             }
             if (!passwordText1.equals(passwordAcces1)){
                 Toast.makeText(this,"Пароли не совпадают, повторите попытку снова",Toast.LENGTH_LONG).show()
+                return@setOnClickListener
             }
         }
     }
