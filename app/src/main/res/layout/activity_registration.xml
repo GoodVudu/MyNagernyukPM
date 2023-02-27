@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".RegistrationActivity">
 
 
     <TextView
@@ -34,7 +34,7 @@
         app:layout_constraintTop_toBottomOf="@id/text1" />
 
     <EditText
-        android:id="@+id/edText1"
+        android:id="@+id/edTextLogin1"
         android:layout_width="163dp"
         android:layout_height="45dp"
         android:layout_marginTop="72dp"
@@ -61,9 +61,9 @@
         android:layout_marginTop="32dp"
         android:hint="Введите пароль"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="@id/edText1"
-        app:layout_constraintRight_toRightOf="@id/edText1"
-        app:layout_constraintTop_toTopOf="@id/edText1" />
+        app:layout_constraintLeft_toLeftOf="@id/edTextLogin1"
+        app:layout_constraintRight_toRightOf="@id/edTextLogin1"
+        app:layout_constraintTop_toTopOf="@id/edTextLogin1" />
 
 
     <Button
@@ -85,10 +85,10 @@
         android:text="По Email"
         android:textAlignment="center"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/edText1"
+        app:layout_constraintBottom_toTopOf="@+id/edTextLogin1"
         app:layout_constraintEnd_toStartOf="@+id/button2"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/edText1"
+        app:layout_constraintStart_toStartOf="@+id/edTextLogin1"
         android:backgroundTint="@color/cardview_light_background"
         app:layout_constraintTop_toBottomOf="@+id/text2" />
 
@@ -102,8 +102,8 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:backgroundTint="@color/cardview_light_background"
-        app:layout_constraintBottom_toTopOf="@+id/edText1"
-        app:layout_constraintEnd_toEndOf="@+id/edText1"
+        app:layout_constraintBottom_toTopOf="@+id/edTextLogin1"
+        app:layout_constraintEnd_toEndOf="@+id/edTextLogin1"
         app:layout_constraintHorizontal_bias="0.915"
         app:layout_constraintStart_toEndOf="@+id/button3"
         app:layout_constraintTop_toBottomOf="@+id/text2" />

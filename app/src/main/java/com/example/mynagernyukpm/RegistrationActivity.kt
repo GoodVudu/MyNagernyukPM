@@ -1,17 +1,24 @@
 package com.example.mynagernyukpm
 
+import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 
-class MainActivity : AppCompatActivity() {
+class RegistrationActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_registration)
 
-        val edText1 = findViewById<EditText>(R.id.edText1) //Login
+
+
+        val storage = getSharedPreferences("settings", MODE_PRIVATE)
+
+
+        val edText1 = findViewById<EditText>(R.id.edTextLogin1) //Login
         val edText2 = findViewById<EditText>(R.id.edText2) //Password
         val edText3 = findViewById<EditText>(R.id.edText3) //Password again
 
@@ -22,6 +29,15 @@ class MainActivity : AppCompatActivity() {
 
         var accessTypeFlag = 1
 
+
+        fun saveData(){
+            val sharedPreferences = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
+            val editor = sharedPreferences.edit()
+            editor.apply{
+                putString("Login",edText1.text.toString())
+                putString("Password",edText2.text.toString())
+            }.apply()
+        }
 
         buttonEmail.setOnClickListener {
             buttonEmail.setTextColor(resources.getColor(R.color.purple_500))
@@ -63,6 +79,7 @@ class MainActivity : AppCompatActivity() {
                     ).show()
                     return@setOnClickListener
                 }
+
             }
             if (passwordText1.length < 8){
                 Toast.makeText(this,"Неправильно введен пароль, минимум 8 символов",Toast.LENGTH_LONG).show()
@@ -72,6 +89,18 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this,"Пароли не совпадают, повторите попытку снова",Toast.LENGTH_LONG).show()
                 return@setOnClickListener
             }
+
+            saveData()
+
+            val intent = Intent(this,ContentActivity::class.java)
+            // intent.putExtra("Login",loginText1)
+            //storage.edit().putString("Login",loginText1).apply()
+            startActivity(intent)
+
+
+
+
+
         }
     }
 }

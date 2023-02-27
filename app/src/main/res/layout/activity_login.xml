@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
 
     <TextView
-        android:id="@+id/text1"
+        android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
@@ -33,7 +33,7 @@
         app:layout_constraintVertical_bias="0.430" />
 
     <EditText
-        android:id="@+id/edText1"
+        android:id="@+id/edTextLoginFirst"
         android:layout_width="157dp"
         android:layout_height="45dp"
         android:layout_marginTop="30dp"
@@ -43,24 +43,24 @@
         app:layout_constraintTop_toTopOf="@+id/text2" />
 
     <EditText
-        android:id="@+id/edText2"
+        android:id="@+id/edTextLoginSecond"
         android:layout_width="158dp"
         android:layout_height="45dp"
         android:layout_marginTop="36dp"
         android:hint="Введите пароль"
-        app:layout_constraintLeft_toLeftOf="@id/edText1"
-        app:layout_constraintRight_toRightOf="@id/edText1"
-        app:layout_constraintTop_toTopOf="@id/edText1" />
+        app:layout_constraintLeft_toLeftOf="@id/edTextLoginFirst"
+        app:layout_constraintRight_toRightOf="@id/edTextLoginFirst"
+        app:layout_constraintTop_toTopOf="@id/edTextLoginFirst" />
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/checkBoxLog"
         android:layout_width="158dp"
         android:layout_height="31dp"
         android:text="Входить автоматически"
         android:textSize="10sp"
-        app:layout_constraintEnd_toEndOf="@+id/edText2"
-        app:layout_constraintStart_toStartOf="@+id/edText2"
-        app:layout_constraintTop_toBottomOf="@+id/edText2" />
+        app:layout_constraintEnd_toEndOf="@+id/edTextLoginSecond"
+        app:layout_constraintStart_toStartOf="@+id/edTextLoginSecond"
+        app:layout_constraintTop_toBottomOf="@+id/edTextLoginSecond" />
 
     <Button
         android:id="@+id/buttonLog"
@@ -69,8 +69,8 @@
         android:text="Войти"
 
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/checkBox"
-        app:layout_constraintStart_toStartOf="@+id/checkBox"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+        app:layout_constraintEnd_toEndOf="@+id/checkBoxLog"
+        app:layout_constraintStart_toStartOf="@+id/checkBoxLog"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxLog" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
