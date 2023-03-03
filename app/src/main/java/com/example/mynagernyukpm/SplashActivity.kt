@@ -10,11 +10,7 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-
         val storage = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
-        val editor = storage.edit()
-
-
 
         val login = storage.getString("Login",null)
 
